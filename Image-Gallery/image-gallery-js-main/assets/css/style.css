@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+  --primay-bgcolor: rgb(98, 91, 91);
+  --secondary-bgcolor: rgb(74, 69, 8);
+  --tertiary-bgcolor: rgb(97, 24, 24);
+}
+
+* {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--secondary-bgcolor);
+}
+
+#imageContainer {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+}
+
+.imageItem {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%; /* Set max width of images to 700px */
+  height: 500px;
+}
+
+/* .title {
+  font-size: 20px;
+  margin-top: 10px;
+} */
+
+.description {
+  margin-top: 5%;
+  color: var(--primary-color);
+  padding-top: 25px;
+  font-size: 2rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  /* Align navigation buttons to left and right */
+  margin-top: 20px;
+  padding: 0 40px; /* Add padding to navigation buttons */
+}
+
+.arrow {
+  width: auto;
+  height: 65px;
+  cursor: pointer;
+  margin: 0 20%;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+  img {
+    max-width: 100%; /* Set max width of images to 700px */
+    height: auto;
+  }
+  .arrow {
+    width: auto;
+    cursor: pointer;
+  }
+}

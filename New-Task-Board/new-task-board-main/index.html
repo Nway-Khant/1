@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Board</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>New Task Board, 2024</h1>
+    <div class="container">
+      <div
+        class="column"
+        id="todo-column"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h2>To Do <button id="add-task" onclick="addTask()">+</button></h2>
+        <div
+          class="task"
+          draggable="true"
+          id="task1"
+          data-task="Task 1"
+          ondragstart="drag(event)"
+          contenteditable="true"
+        >
+          Task to do
+        </div>
+      </div>
+      <div
+        class="column"
+        id="inprogress-column"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h2>In Progress</h2>
+      </div>
+      <div
+        class="column"
+        id="done-column"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h2>Done</h2>
+      </div>
+    </div>
+
+    <div id="trash-bin" ondrop="dropTrash(event)" ondragover="allowDrop(event)">
+      <img src="./assets/images/trash.png" alt="Trash Bin" />
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
